@@ -54,4 +54,10 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message','Product Added Successfully');
     }
+
+    public function show_product(){
+
+        $productData = product::all();
+        return view('admin.show_product',compact('productData'));
+    }
 }
